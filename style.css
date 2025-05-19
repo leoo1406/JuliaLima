@@ -1,0 +1,1328 @@
+/*==============================================================================
+  TABELA DE CONTEÚDO
+  
+  1. Variáveis e Reset
+  2. Tipografia
+  3. Layout e Containers
+  4. Navegação
+  5. Hero Section
+  6. Botões e CTAs
+  7. Portfolio
+  8. Serviços
+  9. Sobre
+  10. Depoimentos
+  11. Equipe
+  12. Contato
+  13. Footer
+  14. Utilitários
+  15. Media Queries
+==============================================================================*/
+
+/*==============================================================================
+  1. VARIÁVEIS E RESET
+==============================================================================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Cores */
+  --primary-color: #5d4b3a;
+  --secondary-color: #a08b76;
+  --accent-color: #8a6f5c;
+  --background-color: #f0ece5;
+  --text-color: #5d4b3a;
+  --light-text: #8a6f5c;
+  --white: #ffffff;
+
+  /* Espaçamento */
+  --section-padding: 5rem 2rem;
+
+  /* Animações */
+  --transition: all 0.3s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  font-weight: 300;
+}
+
+/*==============================================================================
+  2. TIPOGRAFIA
+==============================================================================*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+}
+
+h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--white);
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/*==============================================================================
+  3. LAYOUT E CONTAINERS
+==============================================================================*/
+.section-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4rem;
+}
+
+.section-header p {
+  color: var(--light-text);
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+/*==============================================================================
+  4. NAVEGAÇÃO
+==============================================================================*/
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0.5rem 2rem;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  border-bottom: none;
+  transition: background-color 0.3s ease;
+}
+
+/* Navbar colorida para páginas internas */
+.navbar.colored {
+  background: var(--primary-color);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Adicionar classe para quando a página é rolada */
+.navbar.scrolled {
+  background: var(--primary-color);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--white);
+  letter-spacing: 2px;
+}
+
+.logo img {
+  width: 10rem;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-links a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: var(--white);
+  font-weight: 300;
+  transition: var(--transition);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #b28e6c;
+}
+
+.mobile-menu {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.mobile-menu span {
+  display: block;
+  width: 25px;
+  height: 1px;
+  background: var(--white);
+  margin: 5px 0;
+  transition: var(--transition);
+}
+
+/*==============================================================================
+  5. HERO SECTION
+==============================================================================*/
+.hero {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 0;
+}
+
+.hero-image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Mantém a proporção da imagem */
+}
+
+.hero-line {
+  margin-top: 2rem;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 0 2rem;
+}
+
+.hero-content p {
+  color: var(--white);
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.hero-cta {
+  margin-top: 20px;
+}
+
+/* Hero para páginas internas */
+.services-hero,
+.studio-hero {
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 80px;
+  padding: 0 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.services-hero .hero-overlay,
+.studio-hero .hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.services-hero .hero-content,
+.studio-hero .hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/*==============================================================================
+  6. BOTÕES E CTAs
+==============================================================================*/
+/* Botões padrão */
+.cta-button,
+.cta-button.primary,
+.cta-button.secondary {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  border: 1px solid var(--white);
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 300;
+  letter-spacing: 1px;
+  transition: var(--transition);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.cta-button:hover {
+  background-color: var(--white);
+  color: var(--primary-color);
+}
+
+/* Botão de destaque */
+.cta-button.highlight {
+  background-color: #b28e6c;
+  color: white;
+  border: none;
+  padding: 1rem 2.5rem;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 300;
+  letter-spacing: 1px;
+  transition: var(--transition);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+/* Botão de contato */
+.contact-button {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 300;
+  letter-spacing: 1px;
+  transition: var(--transition);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.contact-button:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+/* Botão do WhatsApp */
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  transition: all 0.3s;
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.1);
+  background-color: #20ba5a;
+}
+
+/* Animação para setas em botões */
+.contact-button i,
+.studio-link i,
+.portfolio-view-all i,
+.services-view-all i {
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.services-view-all:hover,
+.portfolio-view-all:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.contact-button:hover i,
+.studio-link:hover i,
+.portfolio-view-all:hover i,
+.services-view-all:hover i {
+  transform: translateX(5px);
+}
+
+/* Container para botão único de CTA */
+.services-single-cta {
+  text-align: center;
+  margin: 4rem auto 3rem;
+  max-width: 300px;
+}
+
+.services-single-cta .cta-button {
+  width: 100%;
+  display: block;
+}
+
+/*==============================================================================
+  7. PORTFOLIO
+==============================================================================*/
+.portfolio {
+  padding: var(--section-padding);
+  background-color: var(--background-color);
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.portfolio-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  color: var(--white);
+  transform: translateY(100%);
+  transition: var(--transition);
+}
+
+.portfolio-item:hover .portfolio-info {
+  transform: translateY(0);
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.1);
+}
+
+.portfolio-link {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 300;
+  display: inline-block;
+  margin-top: 1rem;
+  letter-spacing: 1px;
+}
+
+.view-all-portfolio {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.portfolio-view-all {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 300;
+  letter-spacing: 1px;
+  transition: var(--transition);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+/* PORTFOLIO CAROUSEL */
+.portfolio-carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.portfolio-carousel {
+  display: flex;
+  width: 300%;
+  animation: scroll linear infinite;
+}
+
+.portfolio-carousel:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.portfolio-item {
+  flex: 1;
+  min-width: calc(100% / 9);
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+/*==============================================================================
+  8. SERVIÇOS
+==============================================================================*/
+.services {
+  padding: var(--section-padding);
+  background-color: var(--white);
+  border-top: 1px solid rgba(93, 75, 58, 0.1);
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.services-content {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.services-text {
+  flex: 1;
+}
+
+.services-image {
+  flex: 1;
+}
+
+.services-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* Botões de serviço na página inicial */
+.services-buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.service-button {
+  display: block;
+  padding: 1.2rem 1rem;
+  text-decoration: none;
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  transition: var(--transition);
+  border-bottom: 1px solid rgba(93, 75, 58, 0.1);
+  font-family: "Cormorant Garamond", serif;
+}
+
+/* Estilo para os botões de serviço com bordas */
+.service-button.bordered-service {
+  position: relative;
+  padding: 1.5rem 1rem;
+  border-bottom: none;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.service-button.bordered-service::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: grey;
+}
+
+.service-button.bordered-service::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: grey;
+}
+
+.service-button.bordered-service::before,
+.service-button.bordered-service::after {
+  transition: all 0.3s ease;
+}
+
+.service-button.bordered-service:hover::before,
+.service-button.bordered-service:hover::after {
+  background-color: #b28e6c;
+}
+
+.service-button.bordered-service:hover {
+  color: #b28e6c;
+  padding-left: 1.5rem;
+}
+
+.service-button.bordered-service {
+  border-right: 2px solid grey;
+  border-right-width: 2px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.service-number {
+  font-weight: 500;
+  margin-right: 0.5rem;
+  font-style: italic;
+}
+
+.service-button span {
+  display: inline-block;
+  font-size: 1.3rem;
+}
+
+.view-all-services {
+  text-align: left;
+  margin-top: 3rem;
+}
+
+.services-view-all {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 300;
+  letter-spacing: 1px;
+  transition: var(--transition);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  background-color: var(--background-color);
+}
+
+/* Layout de colunas para a página de serviços */
+.services-columns {
+  display: flex;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.services-column {
+  flex: 1;
+}
+
+.service-item {
+  margin-bottom: 4rem;
+}
+
+.service-item h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.9rem;
+  font-weight: 300;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.service-item p {
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+}
+
+.service-item ul {
+  list-style: none;
+  margin: 1.5rem 0;
+}
+
+.service-item ul li {
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.service-item ul li::before {
+  content: "—";
+  color: var(--primary-color);
+  position: absolute;
+  left: 0;
+}
+
+.service-item .service-cta {
+  margin-top: 2rem;
+}
+
+/* Alinhamento à direita para a coluna direita */
+.services-column:last-child .service-item {
+  text-align: right;
+}
+
+.services-column:last-child .service-item ul li {
+  padding-left: 0;
+  padding-right: 1.5rem;
+}
+
+.services-column:last-child .service-item ul li::before {
+  left: auto;
+  right: 0;
+}
+
+/* Seção de detalhes de serviço (página antiga) */
+.service-detail {
+  padding: var(--section-padding);
+  background-color: var(--background-color);
+}
+
+.service-detail:nth-child(even) {
+  background-color: var(--white);
+}
+
+.service-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.service-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.service-image {
+  flex: 0 0 45%;
+  max-width: 45%;
+}
+
+.service-text {
+  flex: 0 0 45%;
+  max-width: 45%;
+}
+
+.service-features {
+  list-style: none;
+  margin: 1.5rem 0;
+}
+
+.service-features li {
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.service-features li::before {
+  content: "—";
+  color: var(--primary-color);
+  margin-right: 0.5rem;
+}
+
+.service-cta {
+  margin-top: 2rem;
+}
+
+/* CTA de estúdio */
+.studio-cta {
+  padding: var(--section-padding);
+  background-color: var(--primary-color);
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.studio-cta h2 {
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.studio-cta p {
+  color: var(--white);
+  opacity: 0.8;
+  margin-bottom: 2rem;
+}
+
+/*==============================================================================
+  9. SOBRE
+==============================================================================*/
+.about {
+  padding: var(--section-padding);
+  background-color: var(--background-color);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-column {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about-image {
+  width: 100%;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.about-text h3 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: var(--primary-color);
+  font-family: "Cormorant Garamond", serif;
+}
+
+.stat-label {
+  color: var(--light-text);
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.studio-link-container {
+  margin-top: 2rem;
+}
+
+.studio-link {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 300;
+  letter-spacing: 1px;
+  transition: var(--transition);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.studio-link:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+/*==============================================================================
+  10. DEPOIMENTOS
+==============================================================================*/
+.testimonials {
+  padding: var(--section-padding);
+  background-color: var(--white);
+  position: relative;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.testimonials-container {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  z-index: 1;
+}
+
+.testimonials-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.testimonials-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.testimonial-card {
+  min-width: 100%;
+  padding: 1rem;
+}
+
+.testimonial-content {
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+  background-color: transparent;
+}
+
+.testimonial-author-header {
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-author-header h3 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--primary-color);
+  letter-spacing: 1px;
+}
+
+.testimonial-text {
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.testimonial-text p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--text-color);
+  font-weight: 300;
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  font-style: italic;
+}
+
+.testimonial-nav {
+  width: 40px;
+  height: 40px;
+  border-radius: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  color: var(--primary-color);
+  font-size: 1.5rem;
+}
+
+.testimonial-nav:hover {
+  color: var(--accent-color);
+}
+
+.testimonial-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.testimonial-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(160, 139, 118, 0.2);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.testimonial-dot.active {
+  background: var(--primary-color);
+}
+
+/* Player de áudio para depoimentos */
+.testimonial-audio {
+  max-width: 400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.audio-player {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.audio-player button {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.audio-player button:hover {
+  background: var(--accent-color);
+}
+
+.audio-player .progress-container {
+  flex-grow: 1;
+  height: 4px;
+  background-color: rgba(160, 139, 118, 0.2);
+  position: relative;
+  cursor: pointer;
+}
+
+.audio-player .progress-bar {
+  height: 100%;
+  background-color: var(--primary-color);
+  width: 0;
+}
+
+.audio-player .time {
+  font-size: 0.8rem;
+  color: var(--text-color);
+  min-width: 50px;
+  text-align: right;
+}
+
+/*==============================================================================
+  11. EQUIPE
+==============================================================================*/
+.team-section {
+  padding: var(--section-padding);
+  background-color: var(--white);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.team-member {
+  text-align: center;
+}
+
+.member-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.member-info {
+  padding: 1.5rem 0;
+}
+
+.member-role {
+  color: var(--light-text);
+  margin-bottom: 1rem;
+}
+
+.member-social {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.member-social a {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  transition: var(--transition);
+}
+
+.member-social a:hover {
+  color: var(--secondary-color);
+}
+
+/*==============================================================================
+  12. CONTATO
+==============================================================================*/
+.contact {
+  padding: var(--section-padding);
+  background-color: var(--background-color);
+  text-align: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.contact-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact h2 {
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+}
+
+/*==============================================================================
+  13. FOOTER
+==============================================================================*/
+footer {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 4rem 2rem 2rem;
+  border-top: none;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.2rem;
+}
+
+.social-links a {
+  color: var(--white);
+  transition: var(--transition);
+}
+
+.social-links a:hover {
+  color: black;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-links a {
+  color: var(--white);
+  text-decoration: none;
+  transition: var(--transition);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-links a:hover {
+  color: var(--background-color);
+}
+
+.footer-bottom {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.footer-bottom a {
+  color: rgb(100, 223, 236);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+/*==============================================================================
+  15. MEDIA QUERIES
+==============================================================================*/
+/* Tablets e dispositivos médios */
+@media (max-width: 992px) {
+  .service-image,
+  .service-text {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .service-row {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .service-row.reverse {
+    flex-direction: column;
+  }
+
+  .services-columns {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+/* Dispositivos móveis */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  /* Menu mobile */
+  .nav-links {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--primary-color);
+    padding: 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: none;
+  }
+
+  /* Ajustes de layout */
+  .about-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-item {
+    min-width: calc(100% / 3);
+  }
+
+  .team-member {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer-links a {
+    margin: 0 1rem;
+  }
+
+  /* Ajustes para depoimentos */
+  .testimonial-content {
+    padding: 1rem;
+  }
+
+  .testimonial-text p {
+    font-size: 1rem;
+  }
+
+  .audio-player {
+    flex-wrap: wrap;
+  }
+
+  .audio-player .progress-container {
+    min-width: 100%;
+    order: 2;
+    margin-top: 0.5rem;
+  }
+
+  .audio-player .time {
+    order: 3;
+  }
+
+  /* Ajustes para botões e serviços */
+  .service-button {
+    font-size: 1rem;
+    padding: 1rem 0.5rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-button,
+  .cta-button.primary,
+  .cta-button.secondary {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-cta {
+    width: 100%;
+  }
+
+  .hero-cta .cta-button {
+    width: 100%;
+  }
+
+  .services-content {
+    flex-direction: column;
+  }
+}
