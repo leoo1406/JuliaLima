@@ -4,6 +4,7 @@
  * Este arquivo contém todas as funcionalidades JavaScript do site,
  * organizadas em seções para melhor manutenção.
  */
+import './style.css';
 
 document.addEventListener("DOMContentLoaded", () => {
   /**
