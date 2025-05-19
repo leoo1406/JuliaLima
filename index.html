@@ -1,415 +1,540 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Julia Lima | Designer</title>
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-  />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-</head>
-<body>
-  <header>
-    <nav class="navbar">
-      <div class="logo"><img src="/src/components/home/main-logo.png"></div>
-      <div class="nav-links">
-        <a href="#home">Início</a>
-        <a href="#portfolio">Portfólio</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#sobre">Sobre</a>
-        <a href="studio.html">Equipe</a>
-      </div>
-      <button class="mobile-menu" aria-label="Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </nav>
-  </header>
-
-  <main>
-    <section id="home" class="hero">
-      <div class="hero-image-container">
-        <img src="/src/components/home/main-image.jpg" alt="Julia Lima" class="hero-image" />
-      </div>
-      <div class="hero-content">
-        <h1>Sua marca com<br />presença, clareza e identidade</h1>
-        <p>Criando experiências digitais e offline únicas e memoráveis</p>
-        <div class="hero-buttons">
-          <a href="#servicos" class="cta-button primary">Ver Serviços</a>
-          <a href="#portfolio" class="cta-button secondary">Portfólio</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Julia Lima | Designer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Montserrat:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo"><img src="/src/components/home/main-logo.png" /></div>
+        <div class="nav-links">
+          <a href="#home">Início</a>
+          <a href="#portfolio">Portfólio</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#sobre">Sobre</a>
+          <a href="studio.html">Equipe</a>
         </div>
-        <div class="hero-cta">
-          <a href="https://wa.me/5500000000000" class="cta-button highlight">
-            Chame para um orçamento
-          </a>
-        </div>
-        <img src="https://static.wixstatic.com/media/dbec27_fd3bd84b19f1481e8a1695f2d5e9bc62~mv2.png/v1/fill/w_12,h_76,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Group%206.png" class="hero-line"/>
-      </div>
-    </section>
-
-    <section id="portfolio" class="portfolio">
-      <div class="section-header">
-        <h2>Portfólio</h2>
-        <p>Alguns dos nossos trabalhos recentes</p>
-      </div>
-      <div class="portfolio-carousel-container">
-        <div class="portfolio-carousel">
-          <div class="portfolio-item">
-            <img src="/src/components/partners/brigsdamana.png" alt="Projeto 1"/>
-            <div class="portfolio-info">
-              <h3>Brigs da Mana</h3>
-              <p>Visual Brand Identity</p>
-              <a href="https://www.behance.net/gallery/178713853/Brigs-da-Mana-Visual-Brand-Identity" class="portfolio-link">Ver Projeto</a>
-            </div>
-          </div>
-          <div class="portfolio-item">
-            <img src="/src/components/partners/inacio.png" alt="Projeto 2"/>
-            <div class="portfolio-info">
-              <h3>Dom Inácio</h3>
-              <p>Rebranding</p>
-              <a href="https://www.behance.net/gallery/205113175/Dom-Inacio-Rebranding" class="portfolio-link">Ver Projeto</a>
-            </div>
-          </div>
-          <div class="portfolio-item">
-            <img src="/src/components/partners/dubran.png" alt="Projeto 3"/>
-            <div class="portfolio-info">
-              <h3>Dubran</h3>
-              <p>Complementação de Branding e Mídias Digitais</p>
-              <a href="https://www.behance.net/gallery/217650199/DUBRAN-Complementacao-de-Branding-e-Midias-Digitais" class="portfolio-link">Ver Projeto</a>
-            </div>
-          </div>
-          <div class="portfolio-item">
-            <img src="/src/components/partners/fernanda.png" alt="Projeto 4"/>
-            <div class="portfolio-info">
-              <h3>Fernanda</h3>
-              <p>Visual Brand Identity</p>
-              <a href="https://www.behance.net/gallery/184454631/Fernanda-Rorato-Visual-Brand-Identity" class="portfolio-link">Ver Projeto</a>
-            </div>
-          </div>
-          <div class="portfolio-item">
-            <img src="/src/components/partners/publiart.png" alt="Projeto 5"/>
-            <div class="portfolio-info">
-              <h3>Publiart</h3>
-              <p>Brand Visual Identity</p>
-              <a href="https://www.behance.net/gallery/171208665/Publi-Art-Brand-Visual-Identity" class="portfolio-link">Ver Projeto</a>
-            </div>
-          </div>
-          <!-- Duplicar itens para o efeito de carrossel infinito -->
-          <div class="portfolio-item">
-            <img src="/src/components/partners/brigsdamana.png" alt="Projeto 1"/>
-            <div class="portfolio-info">
-              <h3>Brigs da Mana</h3>
-              <p>Visual Brand Identity</p>
-              <a href="https://www.behance.net/gallery/178713853/Brigs-da-Mana-Visual-Brand-Identity" class="portfolio-link">Ver Projeto</a>
-            </div>
-          </div>
-          <div class="portfolio-item">
-            <img src="/src/components/partners/inacio.png" alt="Projeto 2"/>
-            <div class="portfolio-info">
-              <h3>Dom Inácio</h3>
-              <p>Rebranding</p>
-              <a href="https://www.behance.net/gallery/205113175/Dom-Inacio-Rebranding" class="portfolio-link">Ver Projeto</a>
-            </div>
-          </div>
-          <div class="portfolio-item">
-            <img src="/src/components/partners/dubran.png" alt="Projeto 3"/>
-            <div class="portfolio-info">
-              <h3>Dubran</h3>
-              <p>Complementação de Branding e Mídias Digitais</p>
-              <a href="https://www.behance.net/gallery/217650199/DUBRAN-Complementacao-de-Branding-e-Midias-Digitais" class="portfolio-link">Ver Projeto</a>
-            </div>
-          </div>
-          <div class="portfolio-item">
-            <img src="/src/components/partners/fernanda.png" alt="Projeto 4"/>
-            <div class="portfolio-info">
-              <h3>Fernanda</h3>
-              <p>Visual Brand Identity</p>
-              <a href="https://www.behance.net/gallery/184454631/Fernanda-Rorato-Visual-Brand-Identity" class="portfolio-link">Ver Projeto</a>
-            </div>
-          </div>
-          <div class="portfolio-item">
-            <img src="/src/components/partners/publiart.png" alt="Projeto 5"/>
-            <div class="portfolio-info">
-              <h3>Publiart</h3>
-              <p>Brand Visual Identity</p>
-              <a href="https://www.behance.net/gallery/171208665/Publi-Art-Brand-Visual-Identity" class="portfolio-link">Ver Projeto</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="view-all-portfolio">
-        <a href="https://www.behance.net/julialima46" class="portfolio-view-all">Ver todo meu portfólio <i class="fas fa-arrow-right"></i></a>
-      </div>
-    </section>
-  
-    <section id="servicos" class="services">
-      <div class="section-header">
-        <h2>Você merece uma marca personalizada, única e autêntica!</h2>
-        <p>Encontre a melhor experiência para você</p>
-      </div>
-      <div class="services-container">
-        <div class="services-content">
-          <div class="services-text">
-            <p>
-              Entendemos que o design é a expressão visual da sua empresa e trabalhamos para criar algo único que se destaque no mercado.
-            </p>
-            <p>
-              Somos especializados em criar identidades visuais de marcas, atendendo projetos de diversos segmentos, oferecendo soluções criativas e exclusivas para você!
-            </p>
-            <div class="services-buttons">
-              <a href="servicos.html#web-design" class="service-button bordered-service">
-                <span class="service-number">(01).</span> Branding | Identidade Visual
-              </a>
-              <a href="servicos.html#branding" class="service-button bordered-service">
-                <span class="service-number">(02).</span> Gestão de Redes Sociais | Social Media
-              </a>
-              <a href="servicos.html#marketing" class="service-button bordered-service">
-                <span class="service-number">(03).</span> Marketing Digital e Offline
-              </a>
-            </div>
-            <div class="view-all-services">
-              <a href="servicos.html" class="services-view-all">Ver todos os serviços <i class="fas fa-arrow-right"></i></a>
-            </div>
-          </div>
-          <div class="services-image">
-            <img src="/src/components/home/main-services.jpg" alt="Serviços Julia Lima" />
-          </div>
-        </div>
-      </div>
-    </section>
-  
-    <section id="sobre" class="about">
-      <div class="section-header">
-        <h2>Sobre</h2>
-        <p>Conheça mais sobre mim e o studio</p>
-      </div>
-      <div class="about-container">
-        <!-- Sobre Mim -->
-        <div class="about-column">
-          <div class="about-content">
-            <div class="about-image">
-              <img src="/src/components/home/main-about-me.jpg" alt="Julia Lima" />
-            </div>
-            <div class="about-text">
-              <h3>Sobre Mim</h3>
-              <p>
-                Com mais de 7 anos de experiência em design, branding e redes sociais,
-                muitas empresas confiaram nos nossos serviços para construírem sua presença digital de forma
-                efetiva e memorável.
-              </p>
-              <p>
-                Minha abordagem combina cuidado, estratégia, criatividade e tecnologia para
-                entregar resultados que impactam positivamente os negócios dos
-                meus clientes.
-              </p>
-              <div class="about-stats">
-                <div class="stat">
-                  <span class="stat-number">75+</span>
-                  <span class="stat-label">Projetos Entregues</span>
-                </div>
-                <div class="stat">
-                  <span class="stat-number">75+</span>
-                  <span class="stat-label">Clientes Satisfeitos</span>
-                </div>
-                <div class="stat">
-                  <span class="stat-number">7+</span>
-                  <span class="stat-label">Anos de Experiência</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Sobre o Studio -->
-        <div class="about-column">
-          <div class="about-content">
-            <div class="about-image">
-              <img src="/src/components/home/main-about-studio.jpg" alt="Equipe do Studio" />
-            </div>
-            <div class="about-text">
-              <h3>Sobre o Studio</h3>
-              <p>
-                Fundado em 2018, o Studio Julia Lima nasceu da paixão por design e da vontade de criar soluções visuais que realmente fazem a diferença para nossos clientes.
-              </p>
-              <p>
-                Nossa equipe multidisciplinar combina talentos em design gráfico, desenvolvimento web, marketing digital e estratégia de marca para oferecer um serviço completo e personalizado.
-              </p>
-              <div class="studio-link-container">
-                <a href="studio.html" class="studio-link">Conheça nosso time <i class="fas fa-arrow-right"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  
-    <section id="depoimentos" class="testimonials">
-      <div class="section-header">
-        <h2>Depoimentos</h2>
-        <p>O que nossos clientes dizem</p>
-      </div>
-      <div class="testimonials-container">
-        <button class="testimonial-nav prev">
-          <i class="fas fa-chevron-left"></i>
+        <button class="mobile-menu" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
-        <div class="testimonials-wrapper">
-          <div class="testimonials-track">
-            <!-- Testemunho 1 -->
-            <div class="testimonial-card">
-              <div class="testimonial-content">
-                <div class="testimonial-author-header">
-                  <h3>Beatriz Santos - Santos Agro e Construção</h3>
-                </div>
-                <div class="testimonial-text">
-                  <p>
-                    "Bom dia! O trabalho está sendo maravilhoso, funcional e prático, atendendo perfeitamente às necessidades. 
-                    A dedicação ao longo do processo é notável, sempre disponível e focado nos detalhes. 
-                    Agradecemos pelo esforço e pelo ótimo resultado ❤️"
-                  </p>
-                </div>
-                <div class="testimonial-audio">
-                  <div class="audio-player" data-audio="no.mp3">
-                    <button class="play-btn">
-                      <i class="fas fa-play"></i>
-                    </button>
-                    <div class="progress-container">
-                      <div class="progress-bar"></div>
-                    </div>
-                    <div class="time">0:00</div>
-                    <audio class="audio-element" preload="metadata"></audio>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="hero-image-container">
+          <img
+            src="/src/components/home/main-image.jpg"
+            alt="Julia Lima"
+            class="hero-image"
+          />
+        </div>
+        <div class="hero-content">
+          <h1>Sua marca com<br />presença, clareza e identidade</h1>
+          <p>Criando experiências digitais e offline únicas e memoráveis</p>
+          <div class="hero-buttons">
+            <a href="#servicos" class="cta-button primary">Ver Serviços</a>
+            <a href="#portfolio" class="cta-button secondary">Portfólio</a>
+          </div>
+          <div class="hero-cta">
+            <a href="https://wa.me/5500000000000" class="cta-button highlight">
+              Chame para um orçamento
+            </a>
+          </div>
+          <img
+            src="https://static.wixstatic.com/media/dbec27_fd3bd84b19f1481e8a1695f2d5e9bc62~mv2.png/v1/fill/w_12,h_76,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Group%206.png"
+            class="hero-line"
+          />
+        </div>
+      </section>
+
+      <section id="portfolio" class="portfolio">
+        <div class="section-header">
+          <h2>Portfólio</h2>
+          <p>Alguns dos nossos trabalhos recentes</p>
+        </div>
+        <div class="portfolio-carousel-container">
+          <div class="portfolio-carousel">
+            <div class="portfolio-item">
+              <img
+                src="/src/components/partners/brigsdamana.png"
+                alt="Projeto 1"
+              />
+              <div class="portfolio-info">
+                <h3>Brigs da Mana</h3>
+                <p>Visual Brand Identity</p>
+                <a
+                  href="https://www.behance.net/gallery/178713853/Brigs-da-Mana-Visual-Brand-Identity"
+                  class="portfolio-link"
+                  >Ver Projeto</a
+                >
+              </div>
+            </div>
+            <div class="portfolio-item">
+              <img src="/src/components/partners/inacio.png" alt="Projeto 2" />
+              <div class="portfolio-info">
+                <h3>Dom Inácio</h3>
+                <p>Rebranding</p>
+                <a
+                  href="https://www.behance.net/gallery/205113175/Dom-Inacio-Rebranding"
+                  class="portfolio-link"
+                  >Ver Projeto</a
+                >
+              </div>
+            </div>
+            <div class="portfolio-item">
+              <img src="/src/components/partners/dubran.png" alt="Projeto 3" />
+              <div class="portfolio-info">
+                <h3>Dubran</h3>
+                <p>Complementação de Branding e Mídias Digitais</p>
+                <a
+                  href="https://www.behance.net/gallery/217650199/DUBRAN-Complementacao-de-Branding-e-Midias-Digitais"
+                  class="portfolio-link"
+                  >Ver Projeto</a
+                >
+              </div>
+            </div>
+            <div class="portfolio-item">
+              <img
+                src="/src/components/partners/fernanda.png"
+                alt="Projeto 4"
+              />
+              <div class="portfolio-info">
+                <h3>Fernanda</h3>
+                <p>Visual Brand Identity</p>
+                <a
+                  href="https://www.behance.net/gallery/184454631/Fernanda-Rorato-Visual-Brand-Identity"
+                  class="portfolio-link"
+                  >Ver Projeto</a
+                >
+              </div>
+            </div>
+            <div class="portfolio-item">
+              <img
+                src="/src/components/partners/publiart.png"
+                alt="Projeto 5"
+              />
+              <div class="portfolio-info">
+                <h3>Publiart</h3>
+                <p>Brand Visual Identity</p>
+                <a
+                  href="https://www.behance.net/gallery/171208665/Publi-Art-Brand-Visual-Identity"
+                  class="portfolio-link"
+                  >Ver Projeto</a
+                >
+              </div>
+            </div>
+            <!-- Duplicar itens para o efeito de carrossel infinito -->
+            <div class="portfolio-item">
+              <img
+                src="/src/components/partners/brigsdamana.png"
+                alt="Projeto 1"
+              />
+              <div class="portfolio-info">
+                <h3>Brigs da Mana</h3>
+                <p>Visual Brand Identity</p>
+                <a
+                  href="https://www.behance.net/gallery/178713853/Brigs-da-Mana-Visual-Brand-Identity"
+                  class="portfolio-link"
+                  >Ver Projeto</a
+                >
+              </div>
+            </div>
+            <div class="portfolio-item">
+              <img src="/src/components/partners/inacio.png" alt="Projeto 2" />
+              <div class="portfolio-info">
+                <h3>Dom Inácio</h3>
+                <p>Rebranding</p>
+                <a
+                  href="https://www.behance.net/gallery/205113175/Dom-Inacio-Rebranding"
+                  class="portfolio-link"
+                  >Ver Projeto</a
+                >
+              </div>
+            </div>
+            <div class="portfolio-item">
+              <img src="/src/components/partners/dubran.png" alt="Projeto 3" />
+              <div class="portfolio-info">
+                <h3>Dubran</h3>
+                <p>Complementação de Branding e Mídias Digitais</p>
+                <a
+                  href="https://www.behance.net/gallery/217650199/DUBRAN-Complementacao-de-Branding-e-Midias-Digitais"
+                  class="portfolio-link"
+                  >Ver Projeto</a
+                >
+              </div>
+            </div>
+            <div class="portfolio-item">
+              <img
+                src="/src/components/partners/fernanda.png"
+                alt="Projeto 4"
+              />
+              <div class="portfolio-info">
+                <h3>Fernanda</h3>
+                <p>Visual Brand Identity</p>
+                <a
+                  href="https://www.behance.net/gallery/184454631/Fernanda-Rorato-Visual-Brand-Identity"
+                  class="portfolio-link"
+                  >Ver Projeto</a
+                >
+              </div>
+            </div>
+            <div class="portfolio-item">
+              <img
+                src="/src/components/partners/publiart.png"
+                alt="Projeto 5"
+              />
+              <div class="portfolio-info">
+                <h3>Publiart</h3>
+                <p>Brand Visual Identity</p>
+                <a
+                  href="https://www.behance.net/gallery/171208665/Publi-Art-Brand-Visual-Identity"
+                  class="portfolio-link"
+                  >Ver Projeto</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="view-all-portfolio">
+          <a
+            href="https://www.behance.net/julialima46"
+            class="portfolio-view-all"
+            >Ver todo meu portfólio <i class="fas fa-arrow-right"></i
+          ></a>
+        </div>
+      </section>
+
+      <section id="servicos" class="services">
+        <div class="section-header">
+          <h2>Você merece uma marca personalizada, única e autêntica!</h2>
+          <p>Encontre a melhor experiência para você</p>
+        </div>
+        <div class="services-container">
+          <div class="services-content">
+            <div class="services-text">
+              <p>
+                Entendemos que o design é a expressão visual da sua empresa e
+                trabalhamos para criar algo único que se destaque no mercado.
+              </p>
+              <p>
+                Somos especializados em criar identidades visuais de marcas,
+                atendendo projetos de diversos segmentos, oferecendo soluções
+                criativas e exclusivas para você!
+              </p>
+              <div class="services-buttons">
+                <a
+                  href="servicos.html#web-design"
+                  class="service-button bordered-service"
+                >
+                  <span class="service-number">(01).</span> Branding |
+                  Identidade Visual
+                </a>
+                <a
+                  href="servicos.html#branding"
+                  class="service-button bordered-service"
+                >
+                  <span class="service-number">(02).</span> Gestão de Redes
+                  Sociais | Social Media
+                </a>
+                <a
+                  href="servicos.html#marketing"
+                  class="service-button bordered-service"
+                >
+                  <span class="service-number">(03).</span> Marketing Digital e
+                  Offline
+                </a>
+              </div>
+              <div class="view-all-services">
+                <a href="servicos.html" class="services-view-all"
+                  >Ver todos os serviços <i class="fas fa-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+            <div class="services-image">
+              <img
+                src="/src/components/home/main-services.jpg"
+                alt="Serviços Julia Lima"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="sobre" class="about">
+        <div class="section-header">
+          <h2>Sobre</h2>
+          <p>Conheça mais sobre mim e o studio</p>
+        </div>
+        <div class="about-container">
+          <!-- Sobre Mim -->
+          <div class="about-column">
+            <div class="about-content">
+              <div class="about-image">
+                <img
+                  src="/src/components/home/main-about-me.jpg"
+                  alt="Julia Lima"
+                />
+              </div>
+              <div class="about-text">
+                <h3>Sobre Mim</h3>
+                <p>
+                  Com mais de 7 anos de experiência em design, branding e redes
+                  sociais, muitas empresas confiaram nos nossos serviços para
+                  construírem sua presença digital de forma efetiva e memorável.
+                </p>
+                <p>
+                  Minha abordagem combina cuidado, estratégia, criatividade e
+                  tecnologia para entregar resultados que impactam positivamente
+                  os negócios dos meus clientes.
+                </p>
+                <div class="about-stats">
+                  <div class="stat">
+                    <span class="stat-number">75+</span>
+                    <span class="stat-label">Projetos Entregues</span>
+                  </div>
+                  <div class="stat">
+                    <span class="stat-number">75+</span>
+                    <span class="stat-label">Clientes Satisfeitos</span>
+                  </div>
+                  <div class="stat">
+                    <span class="stat-number">7+</span>
+                    <span class="stat-label">Anos de Experiência</span>
                   </div>
                 </div>
               </div>
             </div>
-            <!-- Testemunho 2 -->
-            <div class="testimonial-card">
-              <div class="testimonial-content">
-                <div class="testimonial-author-header">
-                  <h3>Calvan Rodrigues - Terapeuta</h3>
-                </div>
-                <div class="testimonial-text">
-                  <p>
-                    "A vida é surpreendente e sempre podemos fazer escolhas acertadas! Esse é o elo que me liga à Júlia… sempre uma solução criativa, surpreendente e eficiente.
-                    Com o passar do tempo, alinhamos tanto nosso processo, que ela “adivinha” aquilo que eu quero expressar em minhas redes!
-                    Desejo mais sucesso e desenvolvimento, porque amor pelo que faz e talento já tens de sobra.
-                    Gratidão por esta linda parceria!
-                    Gratidão lindeza 🧡🧡❤️"
-                  </p>
-                </div>
-                <div class="testimonial-audio">
-                  <div class="audio-player" data-audio="https://assets.mixkit.co/sfx/preview/mixkit-game-notification-wave-alarm-987.mp3">
-                    <button class="play-btn">
-                      <i class="fas fa-play"></i>
-                    </button>
-                    <div class="progress-container">
-                      <div class="progress-bar"></div>
-                    </div>
-                    <div class="time">0:00</div>
-                    <audio class="audio-element" preload="metadata"></audio>
-                  </div>
-                </div>
+          </div>
+
+          <!-- Sobre o Studio -->
+          <div class="about-column">
+            <div class="about-content">
+              <div class="about-image">
+                <img
+                  src="/src/components/home/main-about-studio.jpg"
+                  alt="Equipe do Studio"
+                />
               </div>
-            </div>
-            <!-- Testemunho 3 -->
-            <div class="testimonial-card">
-              <div class="testimonial-content">
-                <div class="testimonial-author-header">
-                  <h3>Janaina - Frantz Barber</h3>
-                </div>
-                <div class="testimonial-text">
-                  <p>
-                    "Amamos o seu trabalho!
-                    Além de super atenciosa, entendeu exatamente a nossa essência e o que queríamos transmitir.
-                    Fiquei simplesmente encantada com todo o projeto, tudo perfeito.
-                    Entregou todas as artes antes do prazo, cumpriu além das nossas expectativas.
-                    Você conseguiu materializar os nossos sonhos e adicionou uma pitadinha a mais.
-                    Graças ao seu trabalho lindo, você estará presente em toda a história da nossa loja.
-                    Grata pelo profissionalismo e pela dedicação, recomendo até de olhos fechados 🥰🥰🥰"
-                  </p>
-                </div>
-              </div>
-            </div>
-            <!-- Testemunho 4 -->
-            <div class="testimonial-card">
-              <div class="testimonial-content">
-                <div class="testimonial-author-header">
-                  <h3>Fernanda Rorato - Design de sobrancelhas</h3>
-                </div>
-                <div class="testimonial-text">
-                  <p>
-                    "Que show!!!! Você é top!"
-                  </p>
-                </div>
-              </div>
-            </div>
-            <!-- Testemunho 5 -->
-            <div class="testimonial-card">
-              <div class="testimonial-content">
-                <div class="testimonial-author-header">
-                  <h3>Vanessa Kaliu - Play Negócios Imobiliários</h3>
-                </div>
-                <div class="testimonial-text">
-                  <p>
-                    "Estou encantada com cada arte Júlia!! 🥺🥺😍"
-                  </p>
-                </div>
-              </div>
-            </div>
-            <!-- Testemunho 6 -->
-            <div class="testimonial-card">
-              <div class="testimonial-content">
-                <div class="testimonial-author-header">
-                  <h3>Lucimara - Laços e Lingeries</h3>
-                </div>
-                <div class="testimonial-text">
-                  <p>
-                    "Obrigada sua linda eu amei cada detalhe, ficou tudo perfeito 😍👏👏"
-                  </p>
+              <div class="about-text">
+                <h3>Sobre o Studio</h3>
+                <p>
+                  Fundado em 2018, o Studio Julia Lima nasceu da paixão por
+                  design e da vontade de criar soluções visuais que realmente
+                  fazem a diferença para nossos clientes.
+                </p>
+                <p>
+                  Nossa equipe multidisciplinar combina talentos em design
+                  gráfico, desenvolvimento web, marketing digital e estratégia
+                  de marca para oferecer um serviço completo e personalizado.
+                </p>
+                <div class="studio-link-container">
+                  <a href="studio.html" class="studio-link"
+                    >Conheça nosso time <i class="fas fa-arrow-right"></i
+                  ></a>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <button class="testimonial-nav next">
-          <i class="fas fa-chevron-right"></i>
-        </button>
-      </div>
-      <div class="testimonial-dots"></div>
-    </section>
-  </main>
-  
-  <footer>
-    <div class="footer-content">
-      <div class="footer-info">
-        <div class="logo">JULIA LIMA</div>
-        <div class="social-links">
-          <a href="https://www.instagram.com/studiojulialima.designeer/" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.behance.net/julialima46" target="_blank"><i class="fab fa-behance"></i></a>
+      </section>
+
+      <section id="depoimentos" class="testimonials">
+        <div class="section-header">
+          <h2>Depoimentos</h2>
+          <p>O que nossos clientes dizem</p>
+        </div>
+        <div class="testimonials-container">
+          <button class="testimonial-nav prev">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="testimonials-wrapper">
+            <div class="testimonials-track">
+              <!-- Testemunho 1 -->
+              <div class="testimonial-card">
+                <div class="testimonial-content">
+                  <div class="testimonial-author-header">
+                    <h3>Beatriz Santos - Santos Agro e Construção</h3>
+                  </div>
+                  <div class="testimonial-text">
+                    <p>
+                      "Bom dia! O trabalho está sendo maravilhoso, funcional e
+                      prático, atendendo perfeitamente às necessidades. A
+                      dedicação ao longo do processo é notável, sempre
+                      disponível e focado nos detalhes. Agradecemos pelo esforço
+                      e pelo ótimo resultado ❤️"
+                    </p>
+                  </div>
+                  <div class="testimonial-audio">
+                    <div class="audio-player" data-audio="no.mp3">
+                      <button class="play-btn">
+                        <i class="fas fa-play"></i>
+                      </button>
+                      <div class="progress-container">
+                        <div class="progress-bar"></div>
+                      </div>
+                      <div class="time">0:00</div>
+                      <audio class="audio-element" preload="metadata"></audio>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Testemunho 2 -->
+              <div class="testimonial-card">
+                <div class="testimonial-content">
+                  <div class="testimonial-author-header">
+                    <h3>Calvan Rodrigues - Terapeuta</h3>
+                  </div>
+                  <div class="testimonial-text">
+                    <p>
+                      "A vida é surpreendente e sempre podemos fazer escolhas
+                      acertadas! Esse é o elo que me liga à Júlia… sempre uma
+                      solução criativa, surpreendente e eficiente. Com o passar
+                      do tempo, alinhamos tanto nosso processo, que ela
+                      “adivinha” aquilo que eu quero expressar em minhas redes!
+                      Desejo mais sucesso e desenvolvimento, porque amor pelo
+                      que faz e talento já tens de sobra. Gratidão por esta
+                      linda parceria! Gratidão lindeza 🧡🧡❤️"
+                    </p>
+                  </div>
+                  <div class="testimonial-audio">
+                    <div
+                      class="audio-player"
+                      data-audio="https://assets.mixkit.co/sfx/preview/mixkit-game-notification-wave-alarm-987.mp3"
+                    >
+                      <button class="play-btn">
+                        <i class="fas fa-play"></i>
+                      </button>
+                      <div class="progress-container">
+                        <div class="progress-bar"></div>
+                      </div>
+                      <div class="time">0:00</div>
+                      <audio class="audio-element" preload="metadata"></audio>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Testemunho 3 -->
+              <div class="testimonial-card">
+                <div class="testimonial-content">
+                  <div class="testimonial-author-header">
+                    <h3>Janaina - Frantz Barber</h3>
+                  </div>
+                  <div class="testimonial-text">
+                    <p>
+                      "Amamos o seu trabalho! Além de super atenciosa, entendeu
+                      exatamente a nossa essência e o que queríamos transmitir.
+                      Fiquei simplesmente encantada com todo o projeto, tudo
+                      perfeito. Entregou todas as artes antes do prazo, cumpriu
+                      além das nossas expectativas. Você conseguiu materializar
+                      os nossos sonhos e adicionou uma pitadinha a mais. Graças
+                      ao seu trabalho lindo, você estará presente em toda a
+                      história da nossa loja. Grata pelo profissionalismo e pela
+                      dedicação, recomendo até de olhos fechados 🥰🥰🥰"
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Testemunho 4 -->
+              <div class="testimonial-card">
+                <div class="testimonial-content">
+                  <div class="testimonial-author-header">
+                    <h3>Fernanda Rorato - Design de sobrancelhas</h3>
+                  </div>
+                  <div class="testimonial-text">
+                    <p>"Que show!!!! Você é top!"</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Testemunho 5 -->
+              <div class="testimonial-card">
+                <div class="testimonial-content">
+                  <div class="testimonial-author-header">
+                    <h3>Vanessa Kaliu - Play Negócios Imobiliários</h3>
+                  </div>
+                  <div class="testimonial-text">
+                    <p>"Estou encantada com cada arte Júlia!! 🥺🥺😍"</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Testemunho 6 -->
+              <div class="testimonial-card">
+                <div class="testimonial-content">
+                  <div class="testimonial-author-header">
+                    <h3>Lucimara - Laços e Lingeries</h3>
+                  </div>
+                  <div class="testimonial-text">
+                    <p>
+                      "Obrigada sua linda eu amei cada detalhe, ficou tudo
+                      perfeito 😍👏👏"
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="testimonial-nav next">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+        <div class="testimonial-dots"></div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-info">
+          <div class="logo">JULIA LIMA</div>
+          <div class="social-links">
+            <a
+              href="https://www.instagram.com/studiojulialima.designeer/"
+              target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="https://www.behance.net/julialima46" target="_blank"
+              ><i class="fab fa-behance"></i
+            ></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <a href="#home">Início</a>
+          <a href="#portfolio">Portfólio</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#sobre">Sobre</a>
+          <a href="studio.html">Studio</a>
         </div>
       </div>
-      <div class="footer-links">
-        <a href="#home">Início</a>
-        <a href="#portfolio">Portfólio</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#sobre">Sobre</a>
-        <a href="studio.html">Studio</a>
+      <div class="footer-bottom">
+        <p>
+          &copy; 2025 Julia Lima por
+          <a
+            href="https://www.linkedin.com/in/leonardo-braga-baronio-691567277/"
+            target="_blank"
+            >Leonardo Baronio</a
+          >. Todos os direitos reservados.
+        </p>
       </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 Julia Lima por <a href ="https://www.linkedin.com/in/leonardo-braga-baronio-691567277/" target="_blank">Leonardo Baronio</a>. Todos os direitos reservados.</p>
-    </div>
-  </footer>
-  
-  <a href="https://wa.me/5500000000000" class="whatsapp-button" target="_blank">
-    <i class="fa-regular fa-comment"></i>
-  </a>
-  
-  <script type="module" src="/main.js"></script>
+    </footer>
+
+    <a
+      href="https://wa.me/5500000000000"
+      class="whatsapp-button"
+      target="_blank"
+    >
+      <i class="fa-regular fa-comment"></i>
+    </a>
+
+    <script type="module" src="/main.js"></script>
   </body>
-  </html>
-  
+</html>
