@@ -1325,4 +1325,31 @@ footer {
   .services-content {
     flex-direction: column;
   }
+
+  .services-columns {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .services-column {
+    width: 100%;
+  }
+
+  .service-item {
+    text-align: left;
+  }
+
+  .services-column:last-child .service-item {
+    text-align: left !important;
+  }
+
+  .services-column:last-child .service-item ul li {
+    padding-right: 0 !important;
+    padding-left: 1.5rem !important;
+  }
+
+  .services-column:last-child .service-item ul li::before {
+    left: 0 !important;
+    right: auto !important;
+  }
 }
