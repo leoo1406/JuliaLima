@@ -1,25 +1,8 @@
-/**
- * Julia Lima Designer - Main JavaScript
- *
- * Este arquivo contém todas as funcionalidades JavaScript do site,
- * organizadas em seções para melhor manutenção.
- */
-
 document.addEventListener("DOMContentLoaded", () => {
-  /**
-   * =========================================================================
-   * 1. NAVEGAÇÃO E SCROLL
-   * =========================================================================
-   */
 
-  /**
-   * Efeito de scroll na navbar
-   * Adiciona classe 'scrolled' quando a página é rolada
-   */
   const navbar = document.querySelector(".navbar")
 
   function checkScroll() {
-    // Só adiciona a classe scrolled se a navbar não tiver a classe colored
     if (window.scrollY > 50 && !navbar.classList.contains("colored")) {
       navbar.classList.add("scrolled")
     } else if (window.scrollY <= 50 && !navbar.classList.contains("colored")) {
@@ -27,16 +10,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Verificar posição inicial
   checkScroll()
 
-  // Adicionar evento de scroll
   window.addEventListener("scroll", checkScroll)
 
-  /**
-   * Menu Mobile
-   * Controla a exibição do menu em dispositivos móveis
-   */
   const mobileMenu = document.querySelector(".mobile-menu")
   const navLinks = document.querySelector(".nav-links")
 
@@ -47,10 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   }
 
-  /**
-   * Scroll suave para links de navegação
-   * Implementa rolagem suave ao clicar em links internos
-   */
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       e.preventDefault()
@@ -63,10 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   })
 
-  /**
-   * Destaque de seção ativa
-   * Destaca o link de navegação correspondente à seção visível
-   */
   const sections = document.querySelectorAll("section")
   const navItems = document.querySelectorAll(".nav-links a")
 
@@ -88,16 +57,6 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   })
 
-  /**
-   * =========================================================================
-   * 2. ANIMAÇÕES E EFEITOS VISUAIS
-   * =========================================================================
-   */
-
-  /**
-   * Animação de números na seção Sobre
-   * Anima a contagem de números nas estatísticas
-   */
   function animateValue(element, start, end, duration) {
     let startTimestamp = null
     const step = (timestamp) => {
@@ -130,44 +89,27 @@ document.addEventListener("DOMContentLoaded", () => {
     stats.forEach((stat) => observer.observe(stat))
   }
 
-  /**
-   * =========================================================================
-   * 3. CARROSSEL DE PORTFÓLIO
-   * =========================================================================
-   */
-
   const portfolioCarousel = document.querySelector(".portfolio-carousel")
 
   if (portfolioCarousel) {
-    // Função para ajustar a velocidade do carrossel com base no tamanho da tela
     function adjustCarouselSpeed() {
       const isMobile = window.innerWidth <= 768
 
-      // Define uma duração diferente para dispositivos móveis e desktop
       if (isMobile) {
-        portfolioCarousel.style.animationDuration = "10s" // Mais rápido em dispositivos móveis
+        portfolioCarousel.style.animationDuration = "10s"
         portfolioCarousel.classList.add("mobile-carousel")
       } else {
-        portfolioCarousel.style.animationDuration = "40s" // Velocidade normal em desktop
+        portfolioCarousel.style.animationDuration = "40s"
         portfolioCarousel.classList.remove("mobile-carousel")
       }
 
-      // Garante que a animação esteja sempre em execução
       portfolioCarousel.style.animationPlayState = "running"
     }
 
-    // Ajusta a velocidade inicialmente
     adjustCarouselSpeed()
 
-    // Ajusta a velocidade quando a janela é redimensionada
     window.addEventListener("resize", adjustCarouselSpeed)
   }
-
-  /**
-   * =========================================================================
-   * 4. CARROSSEL DE DEPOIMENTOS
-   * =========================================================================
-   */
 
   const testimonialsTrack = document.querySelector(".testimonials-track")
   const testimonialCards = document.querySelectorAll(".testimonial-card")
@@ -181,9 +123,6 @@ document.addEventListener("DOMContentLoaded", () => {
     let slideInterval
     let isAudioPlaying = false
 
-    /**
-     * Criação dos indicadores (dots)
-     */
     testimonialCards.forEach((_, index) => {
       const dot = document.createElement("div")
       dot.classList.add("testimonial-dot")
@@ -194,59 +133,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const dots = document.querySelectorAll(".testimonial-dot")
 
-    /**
-     * Atualiza os indicadores ativos
-     */
     function updateDots() {
       dots.forEach((dot, index) => {
         dot.classList.toggle("active", index === currentIndex)
       })
     }
 
-    /**
-     * Navega para um slide específico
-     */
     function goToSlide(index) {
       currentIndex = index
       testimonialsTrack.style.transform = `translateX(-${currentIndex * 100}%)`
       updateDots()
     }
 
-    /**
-     * Navega para o próximo slide
-     */
     function nextSlide() {
       if (isAudioPlaying) return
       currentIndex = (currentIndex + 1) % totalSlides
       goToSlide(currentIndex)
     }
 
-    /**
-     * Navega para o slide anterior
-     */
     function prevSlide() {
       if (isAudioPlaying) return
       currentIndex = (currentIndex - 1 + totalSlides) % totalSlides
       goToSlide(currentIndex)
     }
 
-    /**
-     * Inicia a navegação automática
-     */
     function startAutoSlide() {
       if (!isAudioPlaying) {
         slideInterval = setInterval(nextSlide, 5000)
       }
     }
 
-    /**
-     * Para a navegação automática
-     */
     function stopAutoSlide() {
       clearInterval(slideInterval)
     }
 
-    // Eventos dos botões de navegação
     prevButton.addEventListener("click", () => {
       stopAutoSlide()
       prevSlide()
@@ -259,20 +179,15 @@ document.addEventListener("DOMContentLoaded", () => {
       startAutoSlide()
     })
 
-    // Inicia a navegação automática
     startAutoSlide()
 
     const testimonialsContainer = document.querySelector(".testimonials-container")
 
     if (testimonialsContainer) {
-      // Pausa a navegação automática ao passar o mouse
       testimonialsContainer.addEventListener("mouseenter", stopAutoSlide)
       testimonialsContainer.addEventListener("mouseleave", startAutoSlide)
     }
 
-    /**
-     * Suporte a gestos de toque (swipe)
-     */
     let touchStartX = 0
     let touchEndX = 0
 
@@ -300,12 +215,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
-    /**
-     * =========================================================================
-     * 5. PLAYER DE ÁUDIO PARA DEPOIMENTOS
-     * =========================================================================
-     */
-
     const audioPlayers = document.querySelectorAll(".audio-player")
 
     audioPlayers.forEach((player) => {
@@ -318,12 +227,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       audioElement.src = audioUrl
 
-      /**
-       * Funcionalidade de Play/Pause
-       */
       playBtn.addEventListener("click", () => {
         if (audioElement.paused) {
-          // Pausa outros áudios em reprodução
           document.querySelectorAll(".audio-element").forEach((audio) => {
             if (audio !== audioElement && !audio.paused) {
               audio.pause()
@@ -342,7 +247,6 @@ document.addEventListener("DOMContentLoaded", () => {
           audioElement.pause()
           playBtn.querySelector("i").className = "fas fa-play"
 
-          // Verifica se ainda há algum áudio em reprodução
           const anyAudioPlaying = Array.from(document.querySelectorAll(".audio-element")).some((audio) => !audio.paused)
 
           if (!anyAudioPlaying) {
@@ -352,9 +256,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       })
 
-      /**
-       * Atualização da barra de progresso
-       */
       audioElement.addEventListener("timeupdate", () => {
         const progress = (audioElement.currentTime / audioElement.duration) * 100
         progressBar.style.width = `${progress}%`
@@ -364,24 +265,17 @@ document.addEventListener("DOMContentLoaded", () => {
         timeDisplay.textContent = `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`
       })
 
-      /**
-       * Funcionalidade de busca (seek)
-       */
       progressContainer.addEventListener("click", (e) => {
         const clickPosition = e.offsetX / progressContainer.offsetWidth
         const seekTime = clickPosition * audioElement.duration
         audioElement.currentTime = seekTime
       })
 
-      /**
-       * Reset ao final do áudio
-       */
       audioElement.addEventListener("ended", () => {
         progressBar.style.width = "0%"
         playBtn.querySelector("i").className = "fas fa-play"
         timeDisplay.textContent = "0:00"
 
-        // Verifica se ainda há algum áudio em reprodução
         const anyAudioPlaying = Array.from(document.querySelectorAll(".audio-element")).some(
           (audio) => !audio.paused && audio !== audioElement,
         )
@@ -392,9 +286,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       })
 
-      /**
-       * Carregamento de metadados
-       */
       audioElement.addEventListener("loadedmetadata", () => {
         const minutes = Math.floor(audioElement.duration / 60)
         const seconds = Math.floor(audioElement.duration % 60)

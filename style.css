@@ -1,26 +1,3 @@
-/*==============================================================================
-  TABELA DE CONTEÚDO
-  
-  1. Variáveis e Reset
-  2. Tipografia
-  3. Layout e Containers
-  4. Navegação
-  5. Hero Section
-  6. Botões e CTAs
-  7. Portfolio
-  8. Serviços
-  9. Sobre
-  10. Depoimentos
-  11. Equipe
-  12. Contato
-  13. Footer
-  14. Utilitários
-  15. Media Queries
-==============================================================================*/
-
-/*==============================================================================
-  1. VARIÁVEIS E RESET
-==============================================================================*/
 * {
   margin: 0;
   padding: 0;
@@ -28,7 +5,6 @@
 }
 
 :root {
-  /* Cores */
   --primary-color: #5d4b3a;
   --secondary-color: #a08b76;
   --accent-color: #8a6f5c;
@@ -37,10 +13,8 @@
   --light-text: #8a6f5c;
   --white: #ffffff;
 
-  /* Espaçamento */
   --section-padding: 5rem 2rem;
 
-  /* Animações */
   --transition: all 0.3s ease;
 }
 
@@ -56,9 +30,6 @@ body {
   font-weight: 300;
 }
 
-/*==============================================================================
-  2. TIPOGRAFIA
-==============================================================================*/
 h1,
 h2,
 h3,
@@ -87,9 +58,6 @@ p {
   margin-bottom: 1rem;
 }
 
-/*==============================================================================
-  3. LAYOUT E CONTAINERS
-==============================================================================*/
 .section-header {
   text-align: center;
   max-width: 800px;
@@ -102,9 +70,6 @@ p {
   font-weight: 300;
 }
 
-/*==============================================================================
-  4. NAVEGAÇÃO
-==============================================================================*/
 .navbar {
   position: fixed;
   top: 0;
@@ -120,13 +85,11 @@ p {
   transition: background-color 0.3s ease;
 }
 
-/* Navbar colorida para páginas internas */
 .navbar.colored {
   background: var(--primary-color);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Adicionar classe para quando a página é rolada */
 .navbar.scrolled {
   background: var(--primary-color);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -181,9 +144,6 @@ p {
   transition: var(--transition);
 }
 
-/*==============================================================================
-  5. HERO SECTION
-==============================================================================*/
 .hero {
   min-height: 100vh;
   position: relative;
@@ -208,7 +168,7 @@ p {
 .hero-image {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Mantém a proporção da imagem */
+  object-fit: cover;
 }
 
 .hero-line {
@@ -248,7 +208,6 @@ p {
   margin-top: 20px;
 }
 
-/* Hero para páginas internas */
 .services-hero,
 .studio-hero {
   height: 50vh;
@@ -279,10 +238,6 @@ p {
   z-index: 2;
 }
 
-/*==============================================================================
-  6. BOTÕES E CTAs
-==============================================================================*/
-/* Botões padrão */
 .cta-button,
 .cta-button.primary,
 .cta-button.secondary {
@@ -303,7 +258,6 @@ p {
   color: var(--primary-color);
 }
 
-/* Botão de destaque */
 .cta-button.highlight {
   background-color: #b28e6c;
   color: white;
@@ -318,7 +272,6 @@ p {
   font-size: 0.9rem;
 }
 
-/* Botão de contato */
 .contact-button {
   display: inline-block;
   padding: 0.8rem 2rem;
@@ -337,7 +290,6 @@ p {
   color: var(--white);
 }
 
-/* Botão do WhatsApp */
 .whatsapp-button {
   position: fixed;
   bottom: 20px;
@@ -361,7 +313,6 @@ p {
   background-color: #20ba5a;
 }
 
-/* Animação para setas em botões */
 .contact-button i,
 .studio-link i,
 .portfolio-view-all i,
@@ -383,7 +334,6 @@ p {
   transform: translateX(5px);
 }
 
-/* Container para botão único de CTA */
 .services-single-cta {
   text-align: center;
   margin: 4rem auto 3rem;
@@ -395,9 +345,6 @@ p {
   display: block;
 }
 
-/*==============================================================================
-  7. PORTFOLIO
-==============================================================================*/
 .portfolio {
   padding: var(--section-padding);
   background-color: var(--background-color);
@@ -468,7 +415,6 @@ p {
   font-size: 0.9rem;
 }
 
-/* PORTFOLIO CAROUSEL */
 .portfolio-carousel-container {
   width: 100%;
   overflow: hidden;
@@ -501,9 +447,6 @@ p {
   box-sizing: border-box;
 }
 
-/*==============================================================================
-  8. SERVIÇOS
-==============================================================================*/
 .services {
   padding: var(--section-padding);
   background-color: var(--white);
@@ -536,7 +479,6 @@ p {
   display: block;
 }
 
-/* Botões de serviço na página inicial */
 .services-buttons {
   width: 100%;
   display: flex;
@@ -557,7 +499,6 @@ p {
   font-family: "Cormorant Garamond", serif;
 }
 
-/* Estilo para os botões de serviço com bordas */
 .service-button.bordered-service {
   position: relative;
   padding: 1.5rem 1rem;
@@ -638,7 +579,6 @@ p {
   background-color: var(--background-color);
 }
 
-/* Layout de colunas para a página de serviços */
 .services-columns {
   display: flex;
   gap: 4rem;
@@ -691,7 +631,6 @@ p {
   margin-top: 2rem;
 }
 
-/* Alinhamento à direita para a coluna direita */
 .services-column:last-child .service-item {
   text-align: right;
 }
@@ -706,7 +645,6 @@ p {
   right: 0;
 }
 
-/* Seção de detalhes de serviço (página antiga) */
 .service-detail {
   padding: var(--section-padding);
   background-color: var(--background-color);
@@ -759,7 +697,6 @@ p {
   margin-top: 2rem;
 }
 
-/* CTA de estúdio */
 .studio-cta {
   padding: var(--section-padding);
   background-color: var(--primary-color);
@@ -782,9 +719,6 @@ p {
   margin-bottom: 2rem;
 }
 
-/*==============================================================================
-  9. SOBRE
-==============================================================================*/
 .about {
   padding: var(--section-padding);
   background-color: var(--background-color);
@@ -872,9 +806,6 @@ p {
   color: var(--white);
 }
 
-/*==============================================================================
-  10. DEPOIMENTOS
-==============================================================================*/
 .testimonials {
   padding: var(--section-padding);
   background-color: var(--white);
@@ -981,7 +912,6 @@ p {
   background: var(--primary-color);
 }
 
-/* Player de áudio para depoimentos */
 .testimonial-audio {
   max-width: 400px;
   margin: 0 auto;
@@ -1035,9 +965,6 @@ p {
   text-align: right;
 }
 
-/*==============================================================================
-  11. EQUIPE
-==============================================================================*/
 .team-section {
   padding: var(--section-padding);
   background-color: var(--white);
@@ -1088,9 +1015,6 @@ p {
   color: var(--secondary-color);
 }
 
-/*==============================================================================
-  12. CONTATO
-==============================================================================*/
 .contact {
   padding: var(--section-padding);
   background-color: var(--background-color);
@@ -1108,9 +1032,6 @@ p {
   color: var(--primary-color);
 }
 
-/*==============================================================================
-  13. FOOTER
-==============================================================================*/
 footer {
   background-color: var(--primary-color);
   color: var(--white);
@@ -1185,10 +1106,6 @@ footer {
   text-decoration: underline;
 }
 
-/*==============================================================================
-  15. MEDIA QUERIES
-==============================================================================*/
-/* Tablets e dispositivos médios */
 @media (max-width: 992px) {
   .service-image,
   .service-text {
@@ -1211,7 +1128,6 @@ footer {
   }
 }
 
-/* Dispositivos móveis */
 @media (max-width: 768px) {
   h1 {
     font-size: 2.5rem;
@@ -1221,7 +1137,6 @@ footer {
     font-size: 2rem;
   }
 
-  /* Menu mobile */
   .nav-links {
     display: none;
   }
@@ -1243,7 +1158,6 @@ footer {
     border-bottom: none;
   }
 
-  /* Ajustes de layout */
   .about-stats {
     grid-template-columns: 1fr;
   }
@@ -1273,7 +1187,6 @@ footer {
     margin: 0 1rem;
   }
 
-  /* Ajustes para depoimentos */
   .testimonial-content {
     padding: 1rem;
   }
@@ -1296,7 +1209,6 @@ footer {
     order: 3;
   }
 
-  /* Ajustes para botões e serviços */
   .service-button {
     font-size: 1rem;
     padding: 1rem 0.5rem;
