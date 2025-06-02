@@ -167,7 +167,7 @@ p {
 
 .hero-image {
   width: 100%;
-  height: 100%;
+  height: 150%;
   object-fit: cover;
 }
 
@@ -985,7 +985,7 @@ p {
 
 .member-image img {
   width: 100%;
-  height: 400px;
+  height: auto;
   object-fit: cover;
 }
 
@@ -1263,5 +1263,16 @@ footer {
   .services-column:last-child .service-item ul li::before {
     left: 0 !important;
     right: auto !important;
+  }
+
+  .hero-image-container {
+    background-image: url('/src/components/home/main-image-mobile.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    position: absolute;
+  }
+  .hero-image-container .hero-image {
+    display: none;
   }
 }
